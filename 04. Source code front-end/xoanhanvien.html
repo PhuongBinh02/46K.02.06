@@ -1,0 +1,365 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý chấm công</title>
+    <link rel='icon' href='/img/logo1.png' />
+    <style id="reset">
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+progress {
+  vertical-align: baseline;
+}
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+  <style>
+    html,
+    body {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    .bg-clip-text {
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+    }
+    #container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1440px;
+      height: 1172px;
+      transform-origin: 0 0;
+      transform: scale(1);
+      display: none;
+      overflow: hidden;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="container">
+      <div style="width: 1440px; height: 1172px; position: absolute; background: rgb(255, 255, 255); overflow: hidden;">
+        <div style="width: 544px; height: 82px; position: absolute; left: 797px; top: 340px; border-radius: 3px;">
+        </div>
+        <a href="chamcong.html">
+        <div style="position: absolute; left: 102px; top: 394px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Bảng chấm công</span>
+          </p>
+        </div>
+        </a>
+        <a href="quanlynhanvien.html">
+        <div style="position: absolute; left: 102px; top: 248px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 700; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Quản lí nhân viên</span>
+          </p>
+        </div>
+        </a>
+        <a href="luong.html">
+        <div style="position: absolute; left: 97px; top: 556px; text-align: center; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Bảng lương</span>
+          </p>
+        </div>
+        </a>
+        <div style="position: absolute; left: 411px; top: 209px; text-align: center; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 36px; text-decoration: none; font-weight: 700; font-family: roboto; white-space: break-spaces; color: rgb(255, 255, 255); text-transform: none;">Danh sách chấm công</span>
+          </p>
+        </div>
+        <a href="dangxuat.html">
+        <div style="width: 1043px; height: 146px; position: absolute; left: 26px; top: 0px;">
+        </div>
+        <div style="position: absolute; left: 51px; top: 843px; width: 228px; text-align: center; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Đăng xuất</span>
+          </p>
+        </div>
+        </a>
+        <a href="#">
+        <div style="position: absolute; left: 32px; top: 697px; width: 228px; text-align: center; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Cài đặt</span>
+          </p>
+        </div>
+        </a>
+        <img src="/img/logo2.png" width="124" height="102" style="width: 124px; left: 0px; top: 31px; position: absolute;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQzNSIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgMTQzNSA0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBpZD0iTGluZSAzIiBmaWx0ZXI9InVybCgjZmlsdGVyMF9pXzk2XzEzNSkiPgo8cGF0aCBkPSJNMTQzOSAxLjUwMDAyTDE0MzkuNSAxLjQ5OTMxTDE0MzkuNSAwLjQ5OTMxM0wxNDM5IDAuNTAwMDE2TDE0MzkgMS41MDAwMlpNMC4wMDA3MDMyMzQgMy41MjM5M0wxNDM5IDEuNTAwMDJMMTQzOSAwLjUwMDAxNkwtMC4wMDA3MDMyMzQgMi41MjM5M0wwLjAwMDcwMzIzNCAzLjUyMzkzWiIgZmlsbD0iI0Q5RDlEOSIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2lfOTZfMTM1IiB4PSItMC4wMDA3MDE5MDQiIHk9IjAuNDk5MjY4IiB3aWR0aD0iMTQzOS41IiBoZWlnaHQ9IjcuMDI0NjYiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlQ29sb3JNYXRyaXggaW49IlNvdXJjZUFscGhhIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiIHJlc3VsdD0iaGFyZEFscGhhIi8+CjxmZU9mZnNldCBkeT0iNCIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIi8+CjxmZUNvbXBvc2l0ZSBpbjI9ImhhcmRBbHBoYSIgb3BlcmF0b3I9ImFyaXRobWV0aWMiIGsyPSItMSIgazM9IjEiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMjUgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0ic2hhcGUiIHJlc3VsdD0iZWZmZWN0MV9pbm5lclNoYWRvd185Nl8xMzUiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" width="1435" height="3" style="width: 1435px; left: 4.9993px; top: 157.499px; position: absolute;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMiIgaGVpZ2h0PSIxMDA5IiB2aWV3Qm94PSIwIDAgMiAxMDA5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBpZD0iTGluZSA0IiBmaWx0ZXI9InVybCgjZmlsdGVyMF9pXzk2XzEzNikiPgo8cGF0aCBkPSJNMC41MDAwMDEgMTAwOEwwLjUwMDAwMSAxMDA4LjVMMS41IDEwMDguNUwxLjUgMTAwOEwwLjUwMDAwMSAxMDA4Wk0wLjUgMi43OTQ5NWUtMTBMMC41MDAwMDEgMTAwOEwxLjUgMTAwOEwxLjUgLTIuNzk0OTVlLTEwTDAuNSAyLjc5NDk1ZS0xMFoiIGZpbGw9IiNEOUQ5RDkiLz4KPC9nPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9pXzk2XzEzNiIgeD0iMC41IiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxMDEyLjUiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlQ29sb3JNYXRyaXggaW49IlNvdXJjZUFscGhhIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiIHJlc3VsdD0iaGFyZEFscGhhIi8+CjxmZU9mZnNldCBkeT0iNCIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIi8+CjxmZUNvbXBvc2l0ZSBpbjI9ImhhcmRBbHBoYSIgb3BlcmF0b3I9ImFyaXRobWV0aWMiIGsyPSItMSIgazM9IjEiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMjUgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0ic2hhcGUiIHJlc3VsdD0iZWZmZWN0MV9pbm5lclNoYWRvd185Nl8xMzYiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" width="1" height="1008" style="width: 1px; left: 339.5px; top: 160px; position: absolute;">
+        <a href="index.html">
+        <div style="position: absolute; left: -18px; top: 57px; width: 685px; text-align: center; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 43px; text-decoration: none; font-weight: 700; font-family: rubik; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">     HOME </span>
+            <span style="font-size: 34px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Quản lý nhân viên</span>
+          </p>
+        </div>
+        </a>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzM2IiBoZWlnaHQ9IjMiIHZpZXdCb3g9IjAgMCAzMzYgMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgaWQ9IkxpbmUgNSIgeDE9IjAuOTk3MDE1IiB5MT0iMi41MDAwMSIgeDI9IjMzNS45OTciIHkyPSIwLjUwMDAwOSIgc3Ryb2tlPSIjRDlEOUQ5Ii8+Cjwvc3ZnPgo=" width="335" height="3" style="width: 335.006px; left: 4.99402px; top: 325px; position: absolute;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQwIiBoZWlnaHQ9IjMiIHZpZXdCb3g9IjAgMCAzNDAgMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgaWQ9IkxpbmUgNiIgeDE9Ii0wLjAwMjk0MTEzIiB5MT0iMi41MDAwMSIgeDI9IjMzOS45OTciIHkyPSIwLjUwMDAwOSIgc3Ryb2tlPSIjRDlEOUQ5Ii8+Cjwvc3ZnPgo=" width="340" height="3" style="width: 340px; left: 5.68434e-14px; top: 489px; position: absolute;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIiIHZpZXdCb3g9IjAgMCAzNDAgMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgaWQ9IkxpbmUgNyIgeDE9Ii0wLjAwMTM4NTA0IiB5MT0iMS41IiB4Mj0iMzM5Ljk5OSIgeTI9IjAuNTU4MTczIiBzdHJva2U9IiNEOUQ5RDkiLz4KPC9zdmc+Cg==" width="340" height="1" style="width: 340px; left: -5.68434e-14px; top: 645.058px; position: absolute;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzM1IiBoZWlnaHQ9IjEiIHZpZXdCb3g9IjAgMCAzMzUgMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgaWQ9IkxpbmUgOCIgeDE9Ii0zLjQxMjA1ZS0xMCIgeTE9IjAuNSIgeDI9IjMzNSIgeTI9IjAuNSIgc3Ryb2tlPSIjRDlEOUQ5Ii8+Cjwvc3ZnPgo=" width="335" height="1" style="width: 335px; left: 5px; top: 796px; position: absolute;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQxIiBoZWlnaHQ9IjIiIHZpZXdCb3g9IjAgMCAzNDEgMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgaWQ9IkxpbmUgOSIgeDE9IjAuMDAxNDcwNTgiIHkxPSIwLjUwMDAwMiIgeDI9IjM0MC4wMDEiIHkyPSIxLjUiIHN0cm9rZT0iI0Q5RDlEOSIvPgo8L3N2Zz4K" width="340" height="2" style="width: 340.003px; left: 5.68434e-14px; top: 944px; position: absolute;">
+        <img src="/img/nv2.png" width="69" height="70" style="width: 69px; left: 19px; top: 228px; position: absolute;">
+        <img src="/img/chamcong2.png" width="69" height="72" style="width: 69px; left: 19px; top: 380px; position: absolute;">
+        <img src="/img/dangxuat2.png" width="75" height="98" style="width: 75px; left: 16px; top: 808px; position: absolute;">
+        <img src="/img/luong2.png" width="66" height="67" style="width: 66px; left: 22px; top: 539px; position: absolute;">
+        <img src="/img/caidat2.png" width="73" height="77" style="width: 73px; left: 15px; top: 672px; position: absolute;">
+        <a href="#">
+        <div style="position: absolute; left: 1136px; top: 73px; width: 206px; text-align: center; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 32px; text-decoration: none; font-weight: 500; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Admin</span>
+          </p>
+        </div>
+        </a>
+        <img src="/img/admin.png" width="81" height="93" style="width: 81px; left: 1301px; top: 36px; position: absolute;">
+        <div style="width: 1041px; height: 354px; position: absolute; left: 365px; top: 185px; background: rgb(255, 255, 255); border-radius: 13px; border-style: solid; border-color: rgb(217, 217, 217); border-width: 1px;">
+        </div>
+        <div style="position: absolute; left: 384px; top: 220px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Danh sách nhân viên</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 384px; top: 301px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Mã nhân viên</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 583px; top: 298px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Họ và tên</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 792px; top: 299px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Ngày sinh</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 1007px; top: 298px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Số điện thoại</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 1258px; top: 299px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 28px; text-decoration: none; font-weight: 400; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Địa chỉ</span>
+          </p>
+        </div><div style="width: 67px; height: 59px; position: absolute; left: 835px; top: 467px; background: rgb(100, 168, 241); border-radius: 15px;">
+        </div>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA0MiIgaGVpZ2h0PSIyIiB2aWV3Qm94PSIwIDAgMTA0MiAyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBpZD0iTGluZSAxMCIgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfaV85Nl8xNTgpIj4KPHBhdGggZD0iTTEwNDEgMS41SDEwNDEuNVYwLjVIMTA0MVYxLjVaTTAgMS41SDEwNDFWMC41TDAgMC41VjEuNVoiIGZpbGw9IiNEOUQ5RDkiLz4KPC9nPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9pXzk2XzE1OCIgeD0iMCIgeT0iMC41IiB3aWR0aD0iMTA0MS41IiBoZWlnaHQ9IjUiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz4KPGZlQ29sb3JNYXRyaXggaW49IlNvdXJjZUFscGhhIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiIHJlc3VsdD0iaGFyZEFscGhhIi8+CjxmZU9mZnNldCBkeT0iNCIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIi8+CjxmZUNvbXBvc2l0ZSBpbjI9ImhhcmRBbHBoYSIgb3BlcmF0b3I9ImFyaXRobWV0aWMiIGsyPSItMSIgazM9IjEiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMjUgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0ic2hhcGUiIHJlc3VsdD0iZWZmZWN0MV9pbm5lclNoYWRvd185Nl8xNTgiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" width="1041" height="1" style="width: 1041.5px; left: 365px; top: 451.5px; position: absolute;">
+        <div style="position: absolute; left: 856px; top: 478px; width: 36px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 32px; text-decoration: none; font-weight: 800; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">1</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 924px; top: 480px; width: 39px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 36px; text-decoration: none; font-weight: 800; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">&gt;</span>
+          </p>
+        </div>
+        <div style="position: absolute; left: 792px; top: 478px; width: 39px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 36px; text-decoration: none; font-weight: 800; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">&lt;</span>
+          </p>
+        </div>
+        <div style="width: 792px; height: 391px; position: absolute; left: 416px; top: 358px; background: rgb(255, 255, 255); border-radius: 20px; border-style: solid; border-color: rgb(0, 0, 0); border-width: 3px;">
+        </div>
+        <div style="position: absolute; left: 562px; top: 452px; width: 546px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 38px; text-decoration: none; font-weight: 300; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">Bạn muốn xóa nhân viên này?</span>
+          </p>
+        </div>
+        <div style="width: 204px; height: 79px; position: absolute; left: 892px; top: 558px; background: rgb(100, 168, 241); border-radius: 15px;">
+        </div>
+        <div style="width: 204px; height: 79px; position: absolute; left: 555px; top: 556px; background: rgb(255, 255, 255); border-radius: 15px; border-style: solid; border-color: rgb(0, 0, 0); border-width: 1px;">
+        </div>
+        <a href="quanlynhanvien.html">
+        <div style="position: absolute; left: 963px; top: 573px; width: 162px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p><span style="font-size: 40px; text-decoration: none; font-weight: 500; font-family: roboto; white-space: break-spaces; color: rgb(255, 255, 255); text-transform: none;">Yes</span></p>
+        </div>
+        </a>
+        <a href="quanlynhanvien.html">
+        <div style="position: absolute; left: 635px; top: 571px; width: 169px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p><span style="font-size: 40px; text-decoration: none; font-weight: 500; font-family: roboto; white-space: break-spaces; color: rgb(0, 0, 0); text-transform: none;">No</span></p>
+        </div>
+        </a>
+        <img src="/img/bacham.png" width="52" height="54" style="width: 52px; left: 1330px; top: 389px; position: absolute;">
+        <div style="width: 289px; height: 62px; position: absolute; left: 1089px; top: 201px; background: rgb(100, 168, 241); border-radius: 15px;"></div>
+        <a href="themnhanvien.html">
+        <img src="/img/cong.png" width="73" height="67" style="width: 73px; left: 1088px; top: 196px; position: absolute;">
+        <div style="position: absolute; left: 1150px; top: 214px; width: 256px; text-align: left; vertical-align: top; display: flex; flex-direction: column; justify-content: flex-start;">
+          <p>
+            <span style="font-size: 30px; text-decoration: none; font-weight: 500; font-family: roboto; white-space: break-spaces; color: rgb(255, 255, 255); text-transform: none;">Thêm nhân viên</span>
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </body>
+  
+<script>
+const page = {
+  width: 1440,
+  height: 1172
+}
+const resizePage = () => {
+  const viewWidth = window.innerWidth
+  const container = document.getElementById('container')
+  const scale = viewWidth / page.width
+  const displayHeight = page.height * scale || 0
+  document.body.style.paddingTop = displayHeight + 'px'
+  container.style.transform = 'scale(' + scale + ')'
+  container.style.display = 'block'
+}
+resizePage();
+(function () {
+  var throttle = function (type, name, obj) {
+    obj = obj || window;
+    var running = false;
+    var func = function () {
+      if (running) { return; }
+      running = true;
+      requestAnimationFrame(function () {
+        obj.dispatchEvent(new CustomEvent(name));
+        running = false;
+      });
+    };
+    obj.addEventListener(type, func);
+  };
+  throttle("resize", "optimizedResize");
+})();
+window.addEventListener("optimizedResize", resizePage);
+</script>
+
+  </html>
